@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     
+   
+    
     lazy var backView: UIView = {
         var backView:UIView = UIView()
         var rect:CGRect = self.view.frame
@@ -22,12 +24,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         var calender = NSCalendar.current
         calender.firstWeekday = 2
         let weekDay = calender.component(.weekday, from: date  as Date)
-        
-        
         let year = calender.component(.year, from: date as Date)
         print(year)
         let weekOfYear = calender.component(.weekOfYear, from: date as Date)
         print(weekOfYear)
+        
+        
 //        self.addNavTitle("\(year)第\(weekOfYear)周")
         let weekArray:[String] = ["周一","周二","周三","周四","周五","周六","周日"]
         var  count1 = 0
@@ -39,7 +41,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             var rect = CGRect(x:10+count1*49  ,y:15 ,width: 45, height: 30)
             btn.frame =  rect
             btn.setTitleColor(UIColor.black, for: UIControlState.normal)
-            btn.backgroundColor = UIColor.green
             backView.addSubview(btn)
             var dateBtn:UIButton = UIButton(type:.custom)
             dateBtn.backgroundColor = UIColor.green
@@ -69,10 +70,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     tableView.delegate = self
     tableView.dataSource = self
     var rect:CGRect = self.view.frame
-    rect.origin.y = 110
+    rect.origin.y = 120
     rect.size.height -= rect.origin.y
     tableView.frame = rect
-    tableView.backgroundColor = UIColor.orange
     tableView.register(UITableViewCell().classForCoder , forCellReuseIdentifier: "cellId")
     return tableView
     
@@ -82,7 +82,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         self.view.addSubview(self.backView)
         self.view.addSubview(self.tableview)
-
+    
 
     }
 
@@ -110,9 +110,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let webVC:WebVC = self.storyboard!.instantiateViewController(withIdentifier: "WebVC") as! WebVC
+            webVC.hidesBottomBarWhenPushed = true
             self.navigationController!.pushViewController(webVC, animated: true)
-            
-            
         }
     }
 
