@@ -149,7 +149,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }else if indexPath.row == 1{
             let scrolVC:SLScrollLayoutVC = self.storyboard!.instantiateViewController(withIdentifier: "SLScrollLayoutVC") as!SLScrollLayoutVC
             scrolVC.hidesBottomBarWhenPushed = true
-            scrolVC.title = self.dataSource.object(at: indexPath.row)as?String
+            
+            scrolVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
+            
             self.navigationController!.pushViewController(scrolVC, animated: true)
             print("点击了tableView的第二行")
         }

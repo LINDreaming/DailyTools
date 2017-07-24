@@ -9,12 +9,19 @@
 import UIKit
 
 class SLScrollLayoutVC: UIViewController {
-    public var vcTitle:String = ""
+    public var vcTitle:String? = ""
 
+    @IBOutlet weak var contentLb: UILabel!
     @IBOutlet weak var contentTH: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let content:String = "你好，hello,world!\n你好，hello,world!\n你好，hello,world!\n你好，hello,world!\n你好，hello,world!\n你好，hello,world!\n你好，hello,world!\n你好，hello,world!\n"
+        contentLb.text = content
+        contentTH.constant = 200
+        
+        
 self.title = vcTitle
+        
         
     }
 
