@@ -1,24 +1,21 @@
 //
-//  WebVC.swift
+//  SLScrollLayoutVC.swift
 //  DailyTools
 //
-//  Created by 林喜 on 7/21/17.
+//  Created by 林喜 on 7/24/17.
 //  Copyright © 2017 ShowLin. All rights reserved.
 //
 
 import UIKit
 
-class WebVC: UIViewController {
-    
-   public var  vcTitle:String? = ""
-    
-    
+class SLScrollLayoutVC: UIViewController {
+    public var vcTitle:String = ""
 
+    @IBOutlet weak var contentTH: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = vcTitle
+self.title = vcTitle
         
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
