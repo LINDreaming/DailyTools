@@ -106,7 +106,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     tableView.register(UITableViewCell().classForCoder , forCellReuseIdentifier: "cellId")
     return tableView
     
-   }();
+   }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
