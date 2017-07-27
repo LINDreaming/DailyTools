@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataSource: NSMutableArray {
         get {
             let  datasource = NSMutableArray()
-            datasource.addObjects(from: ["web页面","ScrolView的Autolayout约束"])
+            datasource.addObjects(from: ["web页面","ScrolView的Autolayout约束","Alamofire 的使用教程（译）"])
             return datasource
         }
         set {
@@ -154,7 +154,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             self.navigationController!.pushViewController(scrolVC, animated: true)
             print("点击了tableView的第二行")
+        }else if indexPath.row == 2{
+            let photoTaggerVC:PhotoViewController = self.storyboard!.instantiateViewController(withIdentifier: "PhotoViewController") as!PhotoViewController
+            photoTaggerVC.hidesBottomBarWhenPushed = true
+            
+            photoTaggerVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
+            
+            self.navigationController!.pushViewController(photoTaggerVC, animated: true)
+            print("点击了tableView的第三行")
         }
+
     }
 
 }

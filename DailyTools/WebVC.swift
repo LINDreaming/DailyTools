@@ -19,16 +19,14 @@ class WebVC: UIViewController,WKUIDelegate, WKNavigationDelegate{
         webView.uiDelegate = self
         webView.navigationDelegate = self
         webView.load(URLRequest.init(url: URL.init(string: "https://www.baidu.com/")!))
-
         webView.addObserver(self , forKeyPath: "estimatedProgress", options: .new, context: nil)
-        
-        
          return webView
     }()
     
+    // progressView
     lazy var progressView:UIProgressView = {
         var progressView:UIProgressView = UIProgressView.init(frame: CGRect(x:0, y:65 ,width:UIScreen.main.bounds.width, height: 2))
-        progressView.tintColor = UIColor.green
+        progressView.tintColor = UIColor.blue
         progressView.trackTintColor = UIColor.white
         return progressView
         
