@@ -13,12 +13,16 @@
 		351976511F2997E500209104 /* TagsColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519764B1F2997E500209104 /* TagsColorsViewController.swift */; };
 		351976521F2997E500209104 /* TagsColorTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519764C1F2997E500209104 /* TagsColorTableData.swift */; };
 		351976531F2997E500209104 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519764D1F2997E500209104 /* PhotoViewController.swift */; };
+		352E2ECB1F2B3EFF00A0F5E3 /* SLRealmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352E2ECA1F2B3EFF00A0F5E3 /* SLRealmVC.swift */; };
 		3557AACD1F21AD4D0094EB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557AACC1F21AD4D0094EB5B /* AppDelegate.swift */; };
 		3557AACF1F21AD4D0094EB5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557AACE1F21AD4D0094EB5B /* ViewController.swift */; };
 		3557AAD21F21AD4D0094EB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3557AAD01F21AD4D0094EB5B /* Main.storyboard */; };
 		3557AAD41F21AD4D0094EB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3557AAD31F21AD4D0094EB5B /* Assets.xcassets */; };
 		3557AAD71F21AD4D0094EB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3557AAD51F21AD4D0094EB5B /* LaunchScreen.storyboard */; };
 		3557AADF1F21D2AF0094EB5B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557AADE1F21D2AF0094EB5B /* WebVC.swift */; };
+		3562AB861F395CD300C37FAE /* UICollectionViewLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB851F395CD300C37FAE /* UICollectionViewLayoutVC.swift */; };
+		3562AB891F3966C200C37FAE /* SLExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB881F3966C200C37FAE /* SLExtention.swift */; };
+		3562AB911F39B66200C37FAE /* SLCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB901F39B66200C37FAE /* SLCollectionLayout.m */; };
 		35F28BC11F25C702001FC761 /* SLScrollLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */; };
 		ACC722143B4F47D666C00484 /* Pods_DailyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43F724828480CA022BBFA3E /* Pods_DailyTools.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,7 @@
 		3519764B1F2997E500209104 /* TagsColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorsViewController.swift; sourceTree = "<group>"; };
 		3519764C1F2997E500209104 /* TagsColorTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorTableData.swift; sourceTree = "<group>"; };
 		3519764D1F2997E500209104 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		352E2ECA1F2B3EFF00A0F5E3 /* SLRealmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRealmVC.swift; sourceTree = "<group>"; };
 		3557AAC91F21AD4D0094EB5B /* DailyTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3557AACC1F21AD4D0094EB5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3557AACE1F21AD4D0094EB5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +43,11 @@
 		3557AAD61F21AD4D0094EB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3557AAD81F21AD4D0094EB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3557AADE1F21D2AF0094EB5B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		3562AB851F395CD300C37FAE /* UICollectionViewLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayoutVC.swift; sourceTree = "<group>"; };
+		3562AB881F3966C200C37FAE /* SLExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLExtention.swift; sourceTree = "<group>"; };
+		3562AB8E1F39B66200C37FAE /* DailyTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyTools-Bridging-Header.h"; sourceTree = "<group>"; };
+		3562AB8F1F39B66200C37FAE /* SLCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCollectionLayout.h; sourceTree = "<group>"; };
+		3562AB901F39B66200C37FAE /* SLCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCollectionLayout.m; sourceTree = "<group>"; };
 		35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLScrollLayoutVC.swift; sourceTree = "<group>"; };
 		D43F724828480CA022BBFA3E /* Pods_DailyTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C6601C1DE7FA366CCC2AA8 /* Pods-DailyTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyTools/Pods-DailyTools.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,8 +102,12 @@
 			children = (
 				3557AACC1F21AD4D0094EB5B /* AppDelegate.swift */,
 				3557AACE1F21AD4D0094EB5B /* ViewController.swift */,
+				352E2ECA1F2B3EFF00A0F5E3 /* SLRealmVC.swift */,
 				35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */,
 				3557AADE1F21D2AF0094EB5B /* WebVC.swift */,
+				3562AB851F395CD300C37FAE /* UICollectionViewLayoutVC.swift */,
+				3562AB8A1F39B5EB00C37FAE /* ObjectiveC_Class */,
+				3562AB871F395F2400C37FAE /* Extensions */,
 				351976471F2997E500209104 /* PhotoTagger */,
 				3557AAD01F21AD4D0094EB5B /* Main.storyboard */,
 				3557AAD31F21AD4D0094EB5B /* Assets.xcassets */,
@@ -101,6 +115,24 @@
 				3557AAD81F21AD4D0094EB5B /* Info.plist */,
 			);
 			path = DailyTools;
+			sourceTree = "<group>";
+		};
+		3562AB871F395F2400C37FAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3562AB881F3966C200C37FAE /* SLExtention.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3562AB8A1F39B5EB00C37FAE /* ObjectiveC_Class */ = {
+			isa = PBXGroup;
+			children = (
+				3562AB8F1F39B66200C37FAE /* SLCollectionLayout.h */,
+				3562AB901F39B66200C37FAE /* SLCollectionLayout.m */,
+				3562AB8E1F39B66200C37FAE /* DailyTools-Bridging-Header.h */,
+			);
+			path = ObjectiveC_Class;
 			sourceTree = "<group>";
 		};
 		7706043A9583D5E7583E3005 /* Pods */ = {
@@ -156,6 +188,7 @@
 					3557AAC81F21AD4D0094EB5B = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 3CT6VQ4757;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -245,13 +278,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				351976531F2997E500209104 /* PhotoViewController.swift in Sources */,
+				3562AB891F3966C200C37FAE /* SLExtention.swift in Sources */,
 				351976521F2997E500209104 /* TagsColorTableData.swift in Sources */,
 				3519764F1F2997E500209104 /* PhotoColor.swift in Sources */,
+				3562AB911F39B66200C37FAE /* SLCollectionLayout.m in Sources */,
 				351976511F2997E500209104 /* TagsColorsViewController.swift in Sources */,
 				3557AADF1F21D2AF0094EB5B /* WebVC.swift in Sources */,
 				3519764E1F2997E500209104 /* ImaggaRouter.swift in Sources */,
 				3557AACF1F21AD4D0094EB5B /* ViewController.swift in Sources */,
+				352E2ECB1F2B3EFF00A0F5E3 /* SLRealmVC.swift in Sources */,
 				35F28BC11F25C702001FC761 /* SLScrollLayoutVC.swift in Sources */,
+				3562AB861F395CD300C37FAE /* UICollectionViewLayoutVC.swift in Sources */,
 				3557AACD1F21AD4D0094EB5B /* AppDelegate.swift in Sources */,
 				351976501F2997E500209104 /* TagsColorsTableViewController.swift in Sources */,
 			);
@@ -377,11 +414,14 @@
 			baseConfigurationReference = F65517A9B719DC63ABA0008C /* Pods-DailyTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3CT6VQ4757;
 				INFOPLIST_FILE = DailyTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ShowLin.DailyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyTools/ObjectiveC_Class/DailyTools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -391,11 +431,13 @@
 			baseConfigurationReference = E2C6601C1DE7FA366CCC2AA8 /* Pods-DailyTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3CT6VQ4757;
 				INFOPLIST_FILE = DailyTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ShowLin.DailyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyTools/ObjectiveC_Class/DailyTools-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
