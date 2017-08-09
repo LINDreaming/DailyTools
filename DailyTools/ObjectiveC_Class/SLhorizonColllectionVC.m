@@ -9,12 +9,14 @@
 #import "SLhorizonColllectionVC.h"
 #import "CDCollectionViewCell.h"
 #import "SLCollectionLayout.h"
-
+#import "CDCircleLayout.h"
+#import "SquareLayout.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 @interface SLhorizonColllectionVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong)NSMutableArray *imageS;
+@property(nonatomic,strong)UICollectionView *collectionV;
 @end
 
 @implementation SLhorizonColllectionVC
@@ -32,13 +34,8 @@ static NSString *const identifier = @"CDCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UICollectionView *collectionV = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50, SCREENWIDTH, SCREENHEIGHT - 100) collectionViewLayout:[[SLCollectionLayout alloc] init]];
-    [collectionV setBackgroundColor:[UIColor lightGrayColor]];
-    collectionV.delegate = self;
-    collectionV.dataSource = self;
-    collectionV.showsHorizontalScrollIndicator = NO;
-    [collectionV registerNib:[UINib nibWithNibName:@"CDCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifier];
-    [self.view addSubview:collectionV];
+  
+    [self.view addSubview:self.collectionV];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -50,12 +47,43 @@ static NSString *const identifier = @"CDCell";
     cell.imageStr = self.imageS[indexPath.item];
     return cell;
 }
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if ([self.collectionV.collectionViewLayout isKindOfClass:[SLCollectionLayout class]]) {
+        NSLog(@"selected %ld", (long)indexPath.item);
+        [self switchLayout];
 
+    }else{
+        [self switchLayout];
+    }
+}
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - private Methods 
+
+- (void)switchLayout {
+    if ([self.collectionV.collectionViewLayout isKindOfClass:[SquareLayout class]]) {
+        [self.collectionV setCollectionViewLayout:[[SLCollectionLayout alloc] init] animated:YES];
+    } else {
+        [self.collectionV setCollectionViewLayout:[[SquareLayout alloc] init] animated:YES];
+    }
+}
+
+- (UICollectionView *)collectionV{
+    if (!_collectionV) {
+        _collectionV = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 100) collectionViewLayout:[[SquareLayout alloc] init]];
+        [_collectionV setBackgroundColor:[UIColor lightGrayColor]];
+        _collectionV.delegate = self;
+        _collectionV.dataSource = self;
+        _collectionV.showsHorizontalScrollIndicator = NO;
+        [_collectionV registerNib:[UINib nibWithNibName:@"CDCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifier];
+    }
+    return _collectionV;
+}
+
 
 @end

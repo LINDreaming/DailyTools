@@ -21,6 +21,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             self.dataSource = newValue
         }
     }
+    var dateArray:NSMutableArray = ["","","","","2017-8-9"]
+    
     
     lazy var backView: UIView = {
         var backView:UIView = UIView()
@@ -133,7 +135,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
 //        cell.textLabel?.text = "第\(indexPath.row)行"
         cell.textLabel?.text = self.dataSource.object(at: indexPath.row) as? String
-        
+        cell.detailTextLabel?.text = self.dateArray.object(at: indexPath.row) as? String
         
         return cell
         

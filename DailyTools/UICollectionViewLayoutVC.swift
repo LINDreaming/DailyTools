@@ -10,7 +10,7 @@ import UIKit
 
 class UICollectionViewLayoutVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    var datasource:NSMutableArray = ["左右滑动的图片布局"]
+    var datasource:NSMutableArray = ["左右滑动的图片布局","瀑布流效果"]
     
 
     override func viewDidLoad() {
@@ -44,6 +44,12 @@ class UICollectionViewLayoutVC: UIViewController,UITableViewDelegate,UITableView
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let horizonVC:SLhorizonColllectionVC = SLhorizonColllectionVC()
+            horizonVC.hidesBottomBarWhenPushed = false
+            self.navigationController?.pushViewController(horizonVC, animated: true)
+            
+            
+        }else if indexPath.row == 1 {
+            let horizonVC:SLWaterFlowVC = SLWaterFlowVC()
             horizonVC.hidesBottomBarWhenPushed = false
             self.navigationController?.pushViewController(horizonVC, animated: true)
             
