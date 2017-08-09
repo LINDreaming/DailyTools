@@ -55,7 +55,7 @@ static CGFloat const CDScaleFactor = 0.6;
     visibleRect.size = self.collectionView.frame.size;
     visibleRect.origin = self.collectionView.contentOffset;
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
-        CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width * 0.5;
+    CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width * 0.5;
     for (UICollectionViewLayoutAttributes *attribute in array) {
         if (!CGRectIntersectsRect(visibleRect, attribute.frame)) {
             continue;

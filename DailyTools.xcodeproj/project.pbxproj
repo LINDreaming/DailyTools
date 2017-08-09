@@ -23,6 +23,9 @@
 		3562AB861F395CD300C37FAE /* UICollectionViewLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB851F395CD300C37FAE /* UICollectionViewLayoutVC.swift */; };
 		3562AB891F3966C200C37FAE /* SLExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB881F3966C200C37FAE /* SLExtention.swift */; };
 		3562AB911F39B66200C37FAE /* SLCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB901F39B66200C37FAE /* SLCollectionLayout.m */; };
+		357288381F3AA2840054FC67 /* CDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357288341F3AA2840054FC67 /* CDCollectionViewCell.m */; };
+		357288391F3AA2840054FC67 /* CDCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357288351F3AA2840054FC67 /* CDCollectionViewCell.xib */; };
+		3572883A1F3AA2840054FC67 /* SLhorizonColllectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357288371F3AA2840054FC67 /* SLhorizonColllectionVC.m */; };
 		35F28BC11F25C702001FC761 /* SLScrollLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */; };
 		ACC722143B4F47D666C00484 /* Pods_DailyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43F724828480CA022BBFA3E /* Pods_DailyTools.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,11 @@
 		3562AB8E1F39B66200C37FAE /* DailyTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyTools-Bridging-Header.h"; sourceTree = "<group>"; };
 		3562AB8F1F39B66200C37FAE /* SLCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCollectionLayout.h; sourceTree = "<group>"; };
 		3562AB901F39B66200C37FAE /* SLCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCollectionLayout.m; sourceTree = "<group>"; };
+		357288331F3AA2840054FC67 /* CDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCollectionViewCell.h; sourceTree = "<group>"; };
+		357288341F3AA2840054FC67 /* CDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCollectionViewCell.m; sourceTree = "<group>"; };
+		357288351F3AA2840054FC67 /* CDCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCollectionViewCell.xib; sourceTree = "<group>"; };
+		357288361F3AA2840054FC67 /* SLhorizonColllectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLhorizonColllectionVC.h; sourceTree = "<group>"; };
+		357288371F3AA2840054FC67 /* SLhorizonColllectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLhorizonColllectionVC.m; sourceTree = "<group>"; };
 		35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLScrollLayoutVC.swift; sourceTree = "<group>"; };
 		D43F724828480CA022BBFA3E /* Pods_DailyTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C6601C1DE7FA366CCC2AA8 /* Pods-DailyTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyTools/Pods-DailyTools.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +138,11 @@
 			children = (
 				3562AB8F1F39B66200C37FAE /* SLCollectionLayout.h */,
 				3562AB901F39B66200C37FAE /* SLCollectionLayout.m */,
+				357288331F3AA2840054FC67 /* CDCollectionViewCell.h */,
+				357288341F3AA2840054FC67 /* CDCollectionViewCell.m */,
+				357288351F3AA2840054FC67 /* CDCollectionViewCell.xib */,
+				357288361F3AA2840054FC67 /* SLhorizonColllectionVC.h */,
+				357288371F3AA2840054FC67 /* SLhorizonColllectionVC.m */,
 				3562AB8E1F39B66200C37FAE /* DailyTools-Bridging-Header.h */,
 			);
 			path = ObjectiveC_Class;
@@ -219,6 +232,7 @@
 				3557AAD71F21AD4D0094EB5B /* LaunchScreen.storyboard in Resources */,
 				3557AAD41F21AD4D0094EB5B /* Assets.xcassets in Resources */,
 				3557AAD21F21AD4D0094EB5B /* Main.storyboard in Resources */,
+				357288391F3AA2840054FC67 /* CDCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +297,11 @@
 				3519764F1F2997E500209104 /* PhotoColor.swift in Sources */,
 				3562AB911F39B66200C37FAE /* SLCollectionLayout.m in Sources */,
 				351976511F2997E500209104 /* TagsColorsViewController.swift in Sources */,
+				357288381F3AA2840054FC67 /* CDCollectionViewCell.m in Sources */,
 				3557AADF1F21D2AF0094EB5B /* WebVC.swift in Sources */,
 				3519764E1F2997E500209104 /* ImaggaRouter.swift in Sources */,
 				3557AACF1F21AD4D0094EB5B /* ViewController.swift in Sources */,
+				3572883A1F3AA2840054FC67 /* SLhorizonColllectionVC.m in Sources */,
 				352E2ECB1F2B3EFF00A0F5E3 /* SLRealmVC.swift in Sources */,
 				35F28BC11F25C702001FC761 /* SLScrollLayoutVC.swift in Sources */,
 				3562AB861F395CD300C37FAE /* UICollectionViewLayoutVC.swift in Sources */,
