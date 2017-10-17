@@ -23,6 +23,7 @@
 		3562AB861F395CD300C37FAE /* UICollectionViewLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB851F395CD300C37FAE /* UICollectionViewLayoutVC.swift */; };
 		3562AB891F3966C200C37FAE /* SLExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB881F3966C200C37FAE /* SLExtention.swift */; };
 		3562AB911F39B66200C37FAE /* SLCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3562AB901F39B66200C37FAE /* SLCollectionLayout.m */; };
+		356F60401F91B7BB00FD98C9 /* SLadaptionLableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F603F1F91B7BB00FD98C9 /* SLadaptionLableVC.m */; };
 		357288381F3AA2840054FC67 /* CDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357288341F3AA2840054FC67 /* CDCollectionViewCell.m */; };
 		357288391F3AA2840054FC67 /* CDCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357288351F3AA2840054FC67 /* CDCollectionViewCell.xib */; };
 		3572883A1F3AA2840054FC67 /* SLhorizonColllectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357288371F3AA2840054FC67 /* SLhorizonColllectionVC.m */; };
@@ -34,6 +35,7 @@
 		3572884B1F3ABAB20054FC67 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3572884A1F3ABAB20054FC67 /* 1.plist */; };
 		3572884E1F3AD82B0054FC67 /* CDCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572884D1F3AD82B0054FC67 /* CDCircleLayout.m */; };
 		357288511F3AE4990054FC67 /* SquareLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 357288501F3AE4990054FC67 /* SquareLayout.m */; };
+		35F1A6911F94476A008283ED /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1A6901F94476A008283ED /* UIView+PYSearchExtension.m */; };
 		35F28BC11F25C702001FC761 /* SLScrollLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */; };
 		ACC722143B4F47D666C00484 /* Pods_DailyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43F724828480CA022BBFA3E /* Pods_DailyTools.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		3562AB8E1F39B66200C37FAE /* DailyTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyTools-Bridging-Header.h"; sourceTree = "<group>"; };
 		3562AB8F1F39B66200C37FAE /* SLCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCollectionLayout.h; sourceTree = "<group>"; };
 		3562AB901F39B66200C37FAE /* SLCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCollectionLayout.m; sourceTree = "<group>"; };
+		356F603E1F91B7BB00FD98C9 /* SLadaptionLableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLadaptionLableVC.h; sourceTree = "<group>"; };
+		356F603F1F91B7BB00FD98C9 /* SLadaptionLableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLadaptionLableVC.m; sourceTree = "<group>"; };
 		357288331F3AA2840054FC67 /* CDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCollectionViewCell.h; sourceTree = "<group>"; };
 		357288341F3AA2840054FC67 /* CDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCollectionViewCell.m; sourceTree = "<group>"; };
 		357288351F3AA2840054FC67 /* CDCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		3572884D1F3AD82B0054FC67 /* CDCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCircleLayout.m; sourceTree = "<group>"; };
 		3572884F1F3AE4990054FC67 /* SquareLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareLayout.h; sourceTree = "<group>"; };
 		357288501F3AE4990054FC67 /* SquareLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareLayout.m; sourceTree = "<group>"; };
+		35F1A68F1F94476A008283ED /* UIView+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYSearchExtension.h"; sourceTree = "<group>"; };
+		35F1A6901F94476A008283ED /* UIView+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYSearchExtension.m"; sourceTree = "<group>"; };
 		35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLScrollLayoutVC.swift; sourceTree = "<group>"; };
 		D43F724828480CA022BBFA3E /* Pods_DailyTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C6601C1DE7FA366CCC2AA8 /* Pods-DailyTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyTools/Pods-DailyTools.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +176,9 @@
 				3572884D1F3AD82B0054FC67 /* CDCircleLayout.m */,
 				3572884F1F3AE4990054FC67 /* SquareLayout.h */,
 				357288501F3AE4990054FC67 /* SquareLayout.m */,
+				356F603E1F91B7BB00FD98C9 /* SLadaptionLableVC.h */,
+				356F603F1F91B7BB00FD98C9 /* SLadaptionLableVC.m */,
+				35F1A68E1F94476A008283ED /* ObjectiveC_Extention */,
 				3572883B1F3AB6400054FC67 /* WaterFlow */,
 				3562AB8E1F39B66200C37FAE /* DailyTools-Bridging-Header.h */,
 			);
@@ -190,6 +199,15 @@
 				357288441F3AB6400054FC67 /* WFViewLayout.m */,
 			);
 			path = WaterFlow;
+			sourceTree = "<group>";
+		};
+		35F1A68E1F94476A008283ED /* ObjectiveC_Extention */ = {
+			isa = PBXGroup;
+			children = (
+				35F1A68F1F94476A008283ED /* UIView+PYSearchExtension.h */,
+				35F1A6901F94476A008283ED /* UIView+PYSearchExtension.m */,
+			);
+			path = ObjectiveC_Extention;
 			sourceTree = "<group>";
 		};
 		7706043A9583D5E7583E3005 /* Pods */ = {
@@ -337,10 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356F60401F91B7BB00FD98C9 /* SLadaptionLableVC.m in Sources */,
 				357288481F3AB6400054FC67 /* WFModel.m in Sources */,
 				357288451F3AB6400054FC67 /* SLWaterFlowVC.m in Sources */,
 				351976531F2997E500209104 /* PhotoViewController.swift in Sources */,
 				3562AB891F3966C200C37FAE /* SLExtention.swift in Sources */,
+				35F1A6911F94476A008283ED /* UIView+PYSearchExtension.m in Sources */,
 				351976521F2997E500209104 /* TagsColorTableData.swift in Sources */,
 				3519764F1F2997E500209104 /* PhotoColor.swift in Sources */,
 				3572884E1F3AD82B0054FC67 /* CDCircleLayout.m in Sources */,

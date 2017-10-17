@@ -4,3 +4,5 @@
 
 #import "SLhorizonColllectionVC.h"
 #import "SLWaterFlowVC.h"
+#import "SLadaptionLableVC.h"
+

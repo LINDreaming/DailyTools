@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataSource: NSMutableArray {
         get {
             let  datasource = NSMutableArray()
-            datasource.addObjects(from: ["web页面","ScrolView的Autolayout约束","Alamofire 的使用教程（译）","realm 的使用","UICollectionView自定义布局"])
+            datasource.addObjects(from: ["web页面","ScrolView的Autolayout约束","Alamofire 的使用教程（译）","realm 的使用","UICollectionView自定义布局","lable的自适应布局"])
             return datasource
         }
         set {
@@ -153,7 +153,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             scrolVC.hidesBottomBarWhenPushed = true
             
             scrolVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
-            
             self.navigationController!.pushViewController(scrolVC, animated: true)
             print("点击了tableView的第二行")
         }else if indexPath.row == 2{
@@ -168,16 +167,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let realmVC:SLRealmVC = self.storyboard!.instantiateViewController(withIdentifier: "SLRealmVC") as! SLRealmVC
             
             realmVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
-realmVC.hidesBottomBarWhenPushed=true
+        realmVC.hidesBottomBarWhenPushed=true
             self.navigationController?.pushViewController(realmVC, animated: true)
         }else if indexPath.row == 4 {
             let collectionViewlayoutVC:UICollectionViewLayoutVC = self.storyboard!.instantiateViewController(withIdentifier: "UICollectionViewLayoutVC") as! UICollectionViewLayoutVC
             collectionViewlayoutVC.vcTitle(title: (self.dataSource.object(at: indexPath.row)as? String)!)
             collectionViewlayoutVC.hidesBottomBarWhenPushed = true
             self.navigationController!.pushViewController(collectionViewlayoutVC, animated: true)
-            
-            
-            
+ 
+        }else if indexPath.row == 5{
+            let adaptionLableVC:SLadaptionLableVC = SLadaptionLableVC.init()
+            adaptionLableVC.myTitle = self.dataSource.object(at: indexPath.row)as? String
+            self.navigationController!.pushViewController(adaptionLableVC, animated: true)
             
         }
 

@@ -15,6 +15,9 @@ extension UINavigationController{
 
 extension UIViewController{
     func vcTitle(title:String) -> Void {
-  self.title = title
+    self.title = title
     }
+}
+extension String{
+    
 }

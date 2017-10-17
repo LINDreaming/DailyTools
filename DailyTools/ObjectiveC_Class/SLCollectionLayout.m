@@ -42,7 +42,6 @@ static const CGFloat LineSpacing = 80;
     
     return CGPointMake(proposedContentOffset.x + margin, proposedContentOffset.y);
     
-    
 }
 
 static CGFloat const CDActiveDistance = 160;

@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DailyTools/ObjectiveC_Class/SLhorizonColllectionVC.m"
-            timestampString = "523953879.940827"
+            filePath = "DailyTools/ObjectiveC_Class/SLadaptionLableVC.m"
+            timestampString = "529833689.005531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-switchLayout"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-addAndLayoutTagsWithTagsContentView:tagTexts:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyTools/ObjectiveC_Class/SLadaptionLableVC.m"
+            timestampString = "529833689.006148"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-labelWithTitle:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
