@@ -16,6 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             return datasource
         }set {
             self.dataSource = newValue
+            
         }
     }
     var dateArray:NSMutableArray = ["","","","","2017-8-9"]
