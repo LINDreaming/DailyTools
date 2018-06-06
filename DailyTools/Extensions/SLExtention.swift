@@ -21,3 +21,13 @@ extension UIViewController{
 extension String{
     
 }
+
+extension UIDevice{
+    public func isiphoneX() -> Bool {
+        if UIScreen.main.bounds.height == 812 {
+            return true;
+        }
+        return false;
+        
+    }
+}

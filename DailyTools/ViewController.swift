@@ -9,15 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
-    
-    
     var dataSource: NSMutableArray {
         get {
             let  datasource = NSMutableArray()
-            datasource.addObjects(from: ["web页面","ScrolView的Autolayout约束","Alamofire 的使用教程（译）","realm 的使用","UICollectionView自定义布局","lable的自适应布局"])
+            datasource.addObjects(from: ["web页面","ScrolView的Autolayout约束","Alamofire 的使用教程（译）","UICollectionView自定义布局","lable的自适应布局","UIView的层级关系"])
             return datasource
-        }
-        set {
+        }set {
             self.dataSource = newValue
         }
     }
@@ -27,8 +24,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     lazy var backView: UIView = {
         var backView:UIView = UIView()
         var rect:CGRect = self.view.frame
-        rect.origin.y = 64;
-        rect.size.height = 100;
+        if UIDevice.current.isiphoneX() {
+            rect.origin.y = 88
+        }else{
+            rect.origin.y = 64
+        }
+        rect.size.height = 150
         backView.frame = rect
         //计算当前时间
         let date:NSDate = NSDate.init()
@@ -39,8 +40,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         print(year)
         let weekOfYear = calender.component(.weekOfYear, from: date as Date)
         print(weekOfYear)
-        
-        
 //        self.addNavTitle("\(year)第\(weekOfYear)周")
         let weekArray:[String] = ["周一","周二","周三","周四","周五","周六","周日"]
         var  count1 = 0
@@ -48,8 +47,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         for i in weekArray {
             var btn:UIButton = UIButton()
             btn.setTitle(i, for: UIControlState.normal)
-        
-           
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             var rect = CGRect(x:10+count1*49  ,y:5 ,width: 40, height: 40)
             btn.frame =  rect
@@ -58,10 +55,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             btn.layer.borderColor = UIColor.lightGray.cgColor
             btn.layer.borderWidth = 1
             btn.layer.masksToBounds = true
-            
-            
             backView.addSubview(btn)
-            
             var dateBtn:UIButton = UIButton(type:.custom)
             dateBtn.backgroundColor = UIColor.white
             dateBtn.setTitleColor(UIColor.black, for: UIControlState.normal)
@@ -101,10 +95,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     tableView.delegate = self
     tableView.dataSource = self
     var rect:CGRect = self.view.frame
-    rect.origin.y = 180
+    rect.origin.y = 180+24;
     
     rect.size.height -= rect.origin.y
     tableView.frame = rect
+    tableView.tableFooterView=UIView()
     tableView.register(UITableViewCell().classForCoder , forCellReuseIdentifier: "cellId")
     return tableView
     
@@ -114,14 +109,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         self.view.addSubview(self.backView)
         self.view.addSubview(self.tableview)
-    
-
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
     //MARK: UItableviewDelegate &&UITableviewDatasource Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -133,56 +124,41 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let identifier = "cellId"
         var cell: UITableViewCell;
         cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-//        cell.textLabel?.text = "第\(indexPath.row)行"
         cell.textLabel?.text = self.dataSource.object(at: indexPath.row) as? String
         cell.detailTextLabel?.text = self.dateArray.object(at: indexPath.row) as? String
-        
         return cell
-        
-        
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        let titleString = self.dataSource.object(at: indexPath.row) as? String
+        
+        
+        if titleString == "web页面" {
             let webVC:WebVC = self.storyboard!.instantiateViewController(withIdentifier: "WebVC") as! WebVC
             webVC.vcTitle = self.dataSource.object(at: indexPath.row )as? String
             webVC.hidesBottomBarWhenPushed = true
             self.navigationController!.pushViewController(webVC, animated: true)
-        }else if indexPath.row == 1{
+        }else if titleString == "ScrolView的Autolayout约束"{
             let scrolVC:SLScrollLayoutVC = self.storyboard!.instantiateViewController(withIdentifier: "SLScrollLayoutVC") as!SLScrollLayoutVC
             scrolVC.hidesBottomBarWhenPushed = true
-            
             scrolVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
             self.navigationController!.pushViewController(scrolVC, animated: true)
-            print("点击了tableView的第二行")
-        }else if indexPath.row == 2{
+        }else if titleString=="Alamofire 的使用教程（译）"{
             let photoTaggerVC:PhotoViewController = self.storyboard!.instantiateViewController(withIdentifier: "PhotoViewController") as!PhotoViewController
             photoTaggerVC.hidesBottomBarWhenPushed = true
-            
             photoTaggerVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
-            
             self.navigationController!.pushViewController(photoTaggerVC, animated: true)
-            print("点击了tableView的第三行")
-        }else if indexPath.row == 3{
-            let realmVC:SLRealmVC = self.storyboard!.instantiateViewController(withIdentifier: "SLRealmVC") as! SLRealmVC
-            
-            realmVC.vcTitle = self.dataSource.object(at: indexPath.row)as? String
-        realmVC.hidesBottomBarWhenPushed=true
-            self.navigationController?.pushViewController(realmVC, animated: true)
-        }else if indexPath.row == 4 {
+        }else if titleString=="UICollectionView自定义布局" {
             let collectionViewlayoutVC:UICollectionViewLayoutVC = self.storyboard!.instantiateViewController(withIdentifier: "UICollectionViewLayoutVC") as! UICollectionViewLayoutVC
             collectionViewlayoutVC.vcTitle(title: (self.dataSource.object(at: indexPath.row)as? String)!)
             collectionViewlayoutVC.hidesBottomBarWhenPushed = true
             self.navigationController!.pushViewController(collectionViewlayoutVC, animated: true)
- 
-        }else if indexPath.row == 5{
+         }else if titleString=="lable的自适应布局"{
             let adaptionLableVC:SLadaptionLableVC = SLadaptionLableVC.init()
             adaptionLableVC.myTitle = self.dataSource.object(at: indexPath.row)as? String
             self.navigationController!.pushViewController(adaptionLableVC, animated: true)
+        }else if titleString=="UIVIew的层级关系"{
             
         }
-
     }
-
 }
 

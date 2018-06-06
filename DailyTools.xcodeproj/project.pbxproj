@@ -151,6 +151,7 @@
 				35F28BC01F25C702001FC761 /* SLScrollLayoutVC.swift */,
 				3557AADE1F21D2AF0094EB5B /* WebVC.swift */,
 				3562AB851F395CD300C37FAE /* UICollectionViewLayoutVC.swift */,
+				61DE59A320B51EAB00155E10 /* MainModule */,
 				3562AB8A1F39B5EB00C37FAE /* ObjectiveC_Class */,
 				3562AB871F395F2400C37FAE /* Extensions */,
 				351976471F2997E500209104 /* PhotoTagger */,
@@ -208,6 +209,13 @@
 				357288441F3AB6400054FC67 /* WFViewLayout.m */,
 			);
 			path = WaterFlow;
+			sourceTree = "<group>";
+		};
+		61DE59A320B51EAB00155E10 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainModule;
 			sourceTree = "<group>";
 		};
 		7706043A9583D5E7583E3005 /* Pods */ = {
